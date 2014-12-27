@@ -1,0 +1,74 @@
+                         Cadence C-to-Silicon Compiler
+           Version 14.10-s200  (32 bit), build 78898 Tue, 01 Jul 2014
+
+Copyright notice: Copyright 2006-2014 Cadence Design Systems, Inc. All rights
+reserved worldwide.
+
+Patent notice: Protected by U.S. Patents 7472361, 7587687, 7673259, 7711536,
+8458630; other U.S. patents pending.
+
+    Date: Thu Dec  4 10:14:49 2014
+    Command:  /afs/ict.kth.se/pkg/cadence/ctos141/14.10.201/tools.lnx86/ctos/bin/32bit/ctosgui 
+Checked out license 'C_to_Silicon_Compiler_L'
+% gui_design -op open 
+% gui_design -op new 
+[Front-end] Parsing main.c ...
+% new_design fir
+/designs/fir
+% set_attr design_dir "" /designs/fir
+% set_attr auto_write_models "true" /designs/fir
+% define_sim_config -model_dir "./model" /designs/fir
+% set_attr source_files [list main.c] /designs/fir
+% set_attr header_files [list fir.h] /designs/fir
+% set_attr compile_flags " -w" /designs/fir
+% set_attr top_module_path "sc_main.DUT" /designs/fir
+% define_clock -name clk -period 10000 -rise 0 -fall 5000
+% set_attr tech_lib_names [list tutorial.lbr tutorial.lib] [get_design]
+% set_attr low_power_clock_gating true [get_design]
+% build
+[Front-end] Parsing main.c ...
+[SystemC Elaborator] Elaborating design in hierarchical mode ...
+Trimming array 'c' to 2 bits from 32 bits.
+The design has 1 module(s), 1 array(s), 1 process(es), and 0 function(s).
+Writing Post-Build Verilog Simulation Model:
+write_sim -type verilog -suffix _post_build -birthday -dir ./model /designs/fir/modules/DUT.
+Writing Verification Wrapper:
+write_wrapper -o ./model/DUT_ctos_wrapper.h /designs/fir/modules/DUT.
+/designs/fir
+% gui_view -type input
+/windows/window_1
+% unroll_loop /designs/fir/modules/DUT/behaviors/FIR_behavior/nodes/for_ln40 /designs/fir/modules/DUT/behaviors/FIR_behavior/nodes/for_ln35
+Unrolling 6 iterations of loop 'for_ln35'
+Unrolling 5 iterations of loop 'for_ln40'
+Removing array c because it is never read/written or all reads/writes have been optimized away
+% report_timing
+Netlisting module 'DUT'.
+WARNING (CTOS-22016): The timing report does not reflect the timing of instances of user defined modules and modules for clocked method processes such as  'FIR_behavior'.
+
+Timing report for most critical path in module DUT
+  Terminal                Type          Fanout  Delay (ps)  Arrival (ps)
+  --------                ----          ------  ----------  ------------
+  sample[0]               in port            1           0             0
+  FIR_behavior/sample[0]  FIR_behavior                   0             0
+  FIR_behavior/clk        FIR_behavior                   0             0
+------------------------------------------------------------------------
+Timing slack : 10,000ps
+% report_area
+
+Area Report for Module DUT
+  Total Area    Behavior Name
+  ----------    -------------
+       928.2    FIR_behavior
+         0.0    Shared
+       928.2    Total
+% gui_write RTL 
+% write_rtl -dir ./model /designs/fir/modules/DUT
+% gui_view -type rtl  /designs/fir/modules/DUT
+/windows/window_2
+/windows/window_2
+% gui_design -op save 
+% save_design
+Saving design 'fir' to fir.
+% gui_design -op save_as 
+% save_design -dir fir 
+Saving design 'fir' to fir.

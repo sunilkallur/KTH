@@ -1,0 +1,239 @@
+Power Net Detected:
+    Voltage	    Name
+    0.00V	    VSS
+    0.90V	    VDD
+#################################################################################
+# Design Stage: PostRoute
+# Design Mode: 90nm
+# Analysis Mode: MMMC non-OCV
+# Extraction Mode: default
+# Delay Calculation Options: engine=aae signOff=true SIAware=false(opt_signoff)
+# Switching Delay Calculation Engine to AAE
+#################################################################################
+Extraction called for design 'FIR_Toplevel_5' of instances=3396 and nets=667 using extraction engine 'preRoute' .
+**WARN: (ENCEXT-3530):	Use of command 'setDesignMode -process <process_node>' prior to extraction is recommended for maximum accuracy and optimal automatic threshold setting.
+PreRoute RC Extraction called for design FIR_Toplevel_5.
+RC Extraction called in multi-corner(1) mode.
+**WARN: (ENCEXT-6197):	Capacitance table file not specified. This will result in lower parasitic accuracy using preRoute extraction or postRoute extraction with effort level 'low'. It is recommended to generate the capacitance table file using 'generateCapTbl' command and specify it before extraction.
+RCMode: PreRoute
+      RC Corner Indexes            0   
+Capacitance Scaling Factor   : 1.00000 
+Resistance Scaling Factor    : 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 
+Clock Res. Scaling Factor    : 1.00000 
+Shrink Factor                : 1.00000
+PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Initializing multi-corner resistance tables ...
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 542.930M)
+Calculate delays in Single mode...
+Topological Sorting (CPU = 0:00:00.0, MEM = 564.2M, InitMEM = 564.2M)
+siFlow : Timing analysis mode is single, using late cdB files
+ AAE_INFO: Swapping Delay calculation library interface data to disk.
+*** Memory pool thread-safe mode activated.
+AAE_THRD: End delay calculation. (MEM=616.516 CPU=0:00:00.1 REAL=0:00:00.0)
+*** CDM Built up (cpu=0:00:00.5  real=0:00:00.0  mem= 616.5M) ***
+
+Begin Power Analysis
+
+    0.00V	    VSS
+    0.90V	    VDD
+
+Begin Processing Timing Library for Power Calculation
+
+Begin Processing Timing Library for Power Calculation
+
+
+
+Begin Processing Power Net/Grid for Power Calculation
+
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=541.36MB/541.37MB)
+
+Begin Processing Timing Window Data for Power Calculation
+
+clk(200MHz) CK: assigning clock clk to net clk
+Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=541.55MB/541.55MB)
+
+Parsing VCD file VCDFile50.vcd
+
+Starting Reading VCD variables
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT)
+
+Finished Reading VCD variables
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT)
+
+Starting Reading VCD toggles
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT)
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 10%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 20%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 30%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 40%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 50%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 60%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 70%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 80%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 90%
+   With this vcd command,  0 value changes and 1.28e-06 second simulation
+time were counted for power consumption calculation.
+
+  Filename (activity)                    : VCDFile50.vcd
+  Names in file that matched to design   : 0/4347
+  Annotation coverage for this file      : 0/660 = 0%
+
+  4347 nets were found in the VCD file(s) but were not in
+  the design.  These nets are not reported because
+  'read_activity_file -report_missing_nets' is set to false (default).
+
+  Total annotation coverage for all files of type VCD: 0/660 = 0%
+  Percent of VCD annotated nets with zero toggles: 0/660 = 0%
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=541.84MB/541.84MB)
+
+Begin Processing Signal Activity
+
+
+Starting Levelizing
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT)
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 10%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 20%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 30%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 40%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 50%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 60%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 70%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 80%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 90%
+
+Finished Levelizing
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT)
+
+Starting Activity Propagation
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT)
+** INFO:  (VOLTUS_POWR-1356): No default input activity has been set. Defaulting to 0.2.
+Use 'set_default_switching_activity -input_activity' command to change the default activity value.
+
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 10%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 20%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 30%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 40%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 50%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 60%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 70%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 80%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 90%
+
+Finished Activity Propagation
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT)
+
+Activity annotation summary:
+        Primary Inputs : 1/7 = 14.2857%
+          Flop outputs : 0/147 = 0%
+  Memory/Macro outputs : 0/0 = 0%
+      Tristate outputs : 0/0 = 0%
+            Total Nets : 1/660 = 0.151515%
+
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total)=542.04MB/542.04MB)
+
+Begin Power Computation
+
+      ----------------------------------------------------------
+      # of cell(s) missing both power/leakage table: 0
+      # of cell(s) missing power table: 0
+      # of cell(s) missing leakage table: 0
+      # of MSMV cell(s) missing power_level: 0
+      ----------------------------------------------------------
+
+
+
+Starting Calculating power
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT)
+ ... Calculating switching power
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 10%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 20%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 30%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 40%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 50%
+ ... Calculating internal and leakage power
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 60%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 70%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 80%
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT): 90%
+
+Finished Calculating power
+2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT)
+Ended Power Computation: (cpu=0:00:00, real=0:00:00, mem(process/total)=542.38MB/542.38MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=542.40MB/542.40MB)
+
+Ended Power Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total)=542.40MB/542.40MB)
+
+*----------------------------------------------------------------------------------------
+*	Encounter 14.13-s036_1 (64bit) 08/14/2014 18:19 (Linux 2.6)
+*	
+*
+* 	Date & Time:	2014-Nov-27 22:29:57 (2014-Nov-27 21:29:57 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: FIR_Toplevel_5
+*
+*	Liberty Libraries used:
+*	        /afs/kth.se/home/s/u/sunilkr/IL2225_LAB/LAB3/FIR_Toplevel_5.enc.dat/libs/mmmc/tcbn90gwc.lib
+*
+*	Power Domain used:
+*		Rail:        VDD 	Voltage:        0.9
+*
+*       Power View : AV_WC_RCWORST
+*
+*       User-Defined Activity : N.A.
+*
+*	Switching Activity File used:
+*	        VCDFile50.vcd
+*		      Vcd Window used(Start Time, Stop Time):  (20,1300) 
+*                Vcd Scale Factor: 1
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: N.A.
+*
+*       Primary Input Activity: 0.200000
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs
+*
+*       report_power -hierarchy 0
+*
+-----------------------------------------------------------------------------------------
+
+
+Total Power
+-----------------------------------------------------------------------------------------
+Total Internal Power:        0.47493757 	   79.3380%
+Total Switching Power:       0.09963609 	   16.6441%
+Total Leakage Power:         0.02405181 	    4.0178%
+Total Power:                 0.59862547
+-----------------------------------------------------------------------------------------
+ 
+ 
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+* 		Highest Average Power:                clk__L2_I0 (CKND24): 	   0.05741
+* 		Highest Leakage Power:                clk__L1_I0 (CKND24): 	 0.0004674
+* 		Total Cap: 	3.56765e-12 F
+* 		Total instances in design:  1059
+* 		Total instances in design with no power:     0
+*                Total instances in design with no activty:     0
+
+* 		Total Fillers and Decap:   456
+-----------------------------------------------------------------------------------------
+ 
