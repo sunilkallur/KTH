@@ -1,0 +1,21 @@
+set number
+set foldenable
+:set incsearch
+set nobackup
+colorscheme desert
+set ai
+set si
+set hlsearch!
+:set foldmethod=syntax
+nnoremap <F2> :set hlsearch!<CR>
+map mm <Esc>:tabn<CR>
+map nn <Esc>:tabp<CR>
+map <F3> <Esc>:Texplore<CR>
+map <F4>   <C-^>
+map xx   <Esc>:q! <CR>
+map aa   <Esc>:tabe <C-D>
+map ss   <Esc>:wa<CR>
+map qq   <Esc>:wqa<CR>
+map dd   <Esc>:windo diffthis<CR>
+map cc   <Esc>:windo diffoff<CR>
+
